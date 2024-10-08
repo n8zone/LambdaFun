@@ -9,6 +9,11 @@ LOG_NAND = lambda b1: lambda b2: LOG_NOT(LOG_AND(b1)(b2))
 LOG_OR = lambda b1: lambda b2: b1(TRUE)(b2)
 LOG_NOR = lambda b1: lambda b2: LOG_NOT(LOG_OR(b1)(b2))
 
+# LOGICAL COMPARATORS #
+CMP_GT = lambda x: lambda y: TRUE if x > y else FALSE
+CMP_LT = lambda x: lambda y: TRUE if x < y else FALSE
+CMP_EQ = lambda x: lambda y: TRUE if x == y else FALSE
+
 # ARITHMETIC OPERATIONS #
 INCREMENT = lambda x: x+1
 DECREMENT = lambda x: x-1
